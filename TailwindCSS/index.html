@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mao</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { font-family: 'Nunito', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="sticky">
+    <div class="container mx-auto px-4 flex items-center justify-between py-6">
+      <a href="#">
+        <svg class="w-32" viewBox="0 0 177 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.50842 1.40599C5.99268 -1.35767 17.1298 10.8932 17.1298 10.8932C17.1298 10.8932 26.707 9.20202 32.5786 9.20202C38.4501 9.20202 48.3138 10.8932 48.3138 10.8932C48.3138 10.8932 59.3077 -0.82141 63.7625 1.40602C67.1037 6.97459 61.5351 20.9166 61.5351 20.9166C61.5351 20.9166 69.3311 34.8174 61.5351 47.0683C53.7391 59.3191 42.125 60.8007 32.5786 61.0103C22.6534 61.2282 12.5317 58.2054 4.73571 47.0683C-3.06029 35.9312 3.76526 20.9166 3.76526 20.9166C3.76526 20.9166 -1.19365 4.34243 2.50842 1.40599Z"
+            fill="#1A202C" stroke="#1A202C" />
+          <path
+            d="M15.5021 38.7178C20.9362 39.936 26.3704 37.219 27.7289 33.1434C27.7289 33.1434 25.5983 27.3206 23.6533 25.1325C21.7083 22.9443 19.9215 21.5058 16.8607 21.0569C14.1841 20.6643 12.1902 21.0891 10.068 22.4154C7.94586 23.7418 5.99243 27.8495 5.99243 27.8495C5.99243 27.8495 6.88636 32.4424 8.70949 34.6422C10.6835 37.024 12.4835 38.041 15.5021 38.7178Z"
+            fill="#E5EFEF" stroke="#1A202C" />
+          <path
+            d="M14.1758 27.9033C13.7995 31.7673 16.8655 37.219 16.8655 37.219C16.8655 37.219 19.5779 31.7848 19.562 27.9033C19.5502 25.0285 16.8655 20.9166 16.8655 20.9166C16.8655 20.9166 14.4712 24.8696 14.1758 27.9033Z"
+            fill="#1A202C" />
+          <path
+            d="M50.0173 38.5754C44.6266 39.7839 39.236 37.0886 37.8883 33.0456C37.8883 33.0456 40.0018 27.2694 41.9313 25.0988C43.8607 22.9281 45.6333 21.5011 48.6696 21.0558C51.3248 20.6663 53.3027 21.0877 55.4079 22.4034C57.5131 23.7192 59.4509 27.7941 59.4509 27.7941C59.4509 27.7941 58.5641 32.3503 56.7556 34.5324C54.7973 36.8952 53.0118 37.9041 50.0173 38.5754Z"
+            fill="#E5EFEF" stroke="#1A202C" />
+          <path
+            d="M51.3332 27.8475C51.7065 31.6806 48.6651 37.0886 48.6651 37.0886C48.6651 37.0886 45.9743 31.6979 45.9901 27.8475C46.0019 24.9956 48.6651 20.9166 48.6651 20.9166C48.6651 20.9166 51.0402 24.8379 51.3332 27.8475Z"
+            fill="#1A202C" />
+          <path
+            d="M110.32 14.05C111.31 14.05 112.105 14.38 112.705 15.04C113.335 15.67 113.65 16.495 113.65 17.515V43.075C113.65 44.065 113.365 44.845 112.795 45.415C112.225 45.985 111.475 46.27 110.545 46.27C109.645 46.27 108.91 45.985 108.34 45.415C107.77 44.845 107.485 44.065 107.485 43.075V27.19L101.095 39.205C100.675 39.985 100.21 40.555 99.7 40.915C99.22 41.275 98.635 41.455 97.945 41.455C97.285 41.455 96.7 41.275 96.19 40.915C95.68 40.555 95.215 39.985 94.795 39.205L88.405 27.415V43.075C88.405 44.035 88.12 44.815 87.55 45.415C86.98 45.985 86.23 46.27 85.3 46.27C84.4 46.27 83.665 45.985 83.095 45.415C82.525 44.845 82.24 44.065 82.24 43.075V17.515C82.24 16.495 82.54 15.67 83.14 15.04C83.77 14.38 84.58 14.05 85.57 14.05C87.01 14.05 88.105 14.815 88.855 16.345L97.99 33.67L107.08 16.345C107.89 14.815 108.97 14.05 110.32 14.05Z"
+            fill="#1A202C" />
+          <path
+            d="M146.446 41.725C146.686 42.265 146.806 42.745 146.806 43.165C146.806 44.005 146.461 44.725 145.771 45.325C145.111 45.895 144.346 46.18 143.476 46.18C142.906 46.18 142.366 46.03 141.856 45.73C141.346 45.4 140.956 44.92 140.686 44.29L138.301 38.98H123.046L120.661 44.29C120.391 44.92 120.001 45.4 119.491 45.73C119.011 46.03 118.471 46.18 117.871 46.18C117.001 46.18 116.221 45.895 115.531 45.325C114.841 44.725 114.496 44.005 114.496 43.165C114.496 42.745 114.616 42.265 114.856 41.725L127.006 16.21C127.336 15.49 127.831 14.95 128.491 14.59C129.151 14.2 129.856 14.005 130.606 14.005C131.386 14.005 132.106 14.2 132.766 14.59C133.426 14.98 133.936 15.52 134.296 16.21L146.446 41.725ZM135.916 33.67L130.696 21.97L125.431 33.67H135.916Z"
+            fill="#1A202C" />
+          <path
+            d="M161.226 46.405C158.076 46.405 155.331 45.745 152.991 44.425C150.681 43.075 148.896 41.185 147.636 38.755C146.376 36.295 145.746 33.415 145.746 30.115C145.746 26.815 146.376 23.95 147.636 21.52C148.896 19.06 150.681 17.17 152.991 15.85C155.331 14.53 158.076 13.87 161.226 13.87C164.376 13.87 167.106 14.53 169.416 15.85C171.756 17.17 173.556 19.06 174.816 21.52C176.076 23.95 176.706 26.815 176.706 30.115C176.706 33.415 176.076 36.295 174.816 38.755C173.556 41.185 171.756 43.075 169.416 44.425C167.106 45.745 164.376 46.405 161.226 46.405ZM161.226 40.96C163.866 40.96 165.936 40.03 167.436 38.17C168.966 36.31 169.731 33.625 169.731 30.115C169.731 26.605 168.981 23.935 167.481 22.105C165.981 20.245 163.896 19.315 161.226 19.315C158.556 19.315 156.471 20.245 154.971 22.105C153.501 23.935 152.766 26.605 152.766 30.115C152.766 33.625 153.516 36.31 155.016 38.17C156.516 40.03 158.586 40.96 161.226 40.96Z"
+            fill="#1A202C" />
+        </svg>
+      </a>
+
+      <button>
+        <svg class="w-12" viewBox="0 0 60 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 5H55M15 25L55 25M25 45L55 45" stroke="#1A202C" stroke-width="10" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <nav class="hidden">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Adoptar</a>
+          </li>
+          <li>
+            <a href="#">Donar</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+      <h1 class="uppercase font-bold text-4xl leading-tight">
+        Encuentra al minino
+        <span class="block">
+          <span class="text-green-500 font-extrabold">prrrr-fecto</span> para tí
+        </span>
+      </h1>
+
+      <p class="text-xl leading-tight mt-2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, porro necessitatibus? A dolores recusandae, sequi rerum quos expedita fuga aperiam.
+      </p>
+
+      <div class="mt-6">
+        <button class="font-extrabold uppercase px-4 py-2 text-xl border-4 border-gray-900 bg-gray-900 hover:bg-gray-700 hover:border-gray-700 text-white rounded-full">adopta ya</button>
+        <button class="ml-2 font-extrabold uppercase px-4 py-2 text-xl border-4 border-green-500 text-green-500 hover:border-green-400 hover:text-green-400 rounded-full">donar</button>
+      </div>
+    </div>
+    <div class="md:flex justify-end">
+      <img class="md:max-w-md w-full" src="./img/adopt_cat.svg" alt="Adopt Cat">
+    </div>
+  </div>
+
+  <main>
+    <section class="bg-green-500">
+      <div class="container mx-auto px-4 py-16">
+        <h2 class="text-center text-white uppercase font-extrabold text-3xl mb-8">
+          <span class="text-gray-900">Cat Lovers</span> dicen...
+        </h2>
+    
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <article class="bg-white rounded-lg border-4 border-gray-900 px-4 py-6 transform hover:-translate-y-1 transition-transform duration-200 flex">
+            <img class="w-16 h-16 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/3.jpg" alt="woman">
+            <div>
+              <h3 class="uppercase text-lg font-semibold mb-1">david vega</h3>
+              <blockquote class="text-gray-700 leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto!</blockquote>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-lg border-4 border-gray-900 px-4 py-6 transform hover:-translate-y-1 transition-transform duration-200 flex">
+            <img class="w-16 h-16 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/3.jpg" alt="woman">
+            <div>
+              <h3 class="uppercase text-lg font-semibold mb-1">david vega</h3>
+              <blockquote class="text-gray-700 leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto!</blockquote>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-lg border-4 border-gray-900 px-4 py-6 transform hover:-translate-y-1 transition-transform duration-200 flex">
+            <img class="w-16 h-16 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/3.jpg" alt="woman">
+            <div>
+              <h3 class="uppercase text-lg font-semibold mb-1">david vega</h3>
+              <blockquote class="text-gray-700 leading-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto!</blockquote>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="container mx-auto px-4 py-8">
+      <p class="text-sm text-center">&copy; Todos los derechos Reservados. Hecho con ❤🐾😻</p>
+    </div>
+  </footer>
+  
+</body>
+</html>

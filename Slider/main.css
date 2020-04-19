@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --accent: #78e2a0;
+  --background: rgb(30, 33, 41);
+  --color: #fff;
+  --secondary: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--color);
+}
+
+.container {
+  width: 75%;
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: var(--accent);
+}
+
+.carousel {
+  position: relative;
+  height: 600px;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__track-container {
+  background-color: var(--accent);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: .5rem;
+}
+
+.carousel__track {
+  list-style: none;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background-color: var(--color);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  padding: .5rem;
+  align-items: center;
+  justify-content: center;
+  opacity: .75;
+}
+
+.carousel__button:hover {
+  opacity: 1;
+}
+
+.carousel__button--left {
+  left: -4rem;
+}
+
+.carousel__button--right {
+  right: -4rem;
+}
+
+.carousel__button img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--color);
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background-color: var(--accent);
+}
+
+@media screen and (min-width: 600px) {
+  .carousel__button {
+    display: flex;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Slider</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="title">Dynamic Slider</h1>
+
+    <div class="carousel">
+      <button class="carousel__button carousel__button--left">
+        <img src="./img/left-arrow.svg" alt="">
+      </button>
+
+      <div class="carousel__track-container">
+        <ul class="carousel__track">
+          <li class="carousel__slide">
+            <img class="carousel__image" src="./img/slide-1.webp" alt="">
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="./img/slide-2.webp" alt="">
+          </li>
+          <li class="carousel__slide">
+            <img class="carousel__image" src="./img/slide-3.webp" alt="">
+          </li>
+        </ul>
+      </div>
+
+      <button class="carousel__button carousel__button--right">
+        <img src="./img/right-arrow.svg" alt="">
+      </button>
+
+      <div class="carousel__nav">
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./carousel.js"></script>
+</body>
+
+</html>
