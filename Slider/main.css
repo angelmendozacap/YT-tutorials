@@ -46,13 +46,15 @@ body {
 .carousel__track-container {
   background-color: var(--accent);
   height: 100%;
-  position: relative;
   overflow: hidden;
   border-radius: .5rem;
 }
 
 .carousel__track {
   list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform .4s ease-in;
 }
 
 .carousel__slide {
@@ -77,6 +79,8 @@ body {
   justify-content: center;
   opacity: .75;
 }
+
+.carousel__button.is-hidden { display: none; }
 
 .carousel__button:hover {
   opacity: 1;
@@ -111,7 +115,7 @@ body {
   cursor: pointer;
 }
 
-.carousel__indicator.current-slide {
+.carousel__indicator.active {
   background-color: var(--accent);
 }
 
