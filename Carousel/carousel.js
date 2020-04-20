@@ -70,6 +70,11 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
   slide.classList.add('current-slide')
 }
 
+const udpateDots = (currentDot, targetDot) => {
+  currentDot.classList.remove('active')
+  targetDot.classList.add('active')
+}
+
 const run = async () => {
   const images = await getData(API_URL)
   pushElements(images)
@@ -83,14 +88,55 @@ prevBtn.addEventListener('click', () => {
   const currentSlide = slides.find(slide => slide.classList.contains('current-slide'))
   const prevSlide = currentSlide.previousElementSibling
 
+  const currentDot = dots.find(dot => dot.classList.contains('active'))
+  const prevDot = currentDot.previousElementSibling
+
   moveToSlide(track, currentSlide, prevSlide)
+  udpateDots(currentDot, prevDot)
 })
 
 nextBtn.addEventListener('click', () => {
   const currentSlide = slides.find(slide => slide.classList.contains('current-slide'))
   const nextSlide = currentSlide.nextElementSibling
 
+  const currentDot = dots.find(dot => dot.classList.contains('active'))
+  const nextDot = currentDot.nextElementSibling
+
   moveToSlide(track, currentSlide, nextSlide)
+  udpateDots(currentDot, nextDot)
+})
+
+dotsNav.addEventListener('click', e => {
+  const targetDot = e.target.closest('button')
+  if (!targetDot) return
+
+  const currentSlide = slides.find(slide => slide.classList.contains('current-slide'))
+  const currentDot = dots.find(dot => dot.classList.contains('active'))
+
+  const targetIndex = dots.findIndex(dot => dot === targetDot)
+  const targetSlide = slides[targetIndex]
+
+  // const currentIndex = slides.findIndex(slide => slide === currentSlide)
+  // const targetIndex = slides.findIndex(slide => slide === targetSlide)
+  // currentSlide.classList.remove('current-slide')
+
+  // const lastIndex = slides.length - 1
+  // let position = `-${targetIndex * 100}%`
+  // let slide = targetSlide
+
+  // if (currentIndex === 0 && targetIndex === -1) {
+  //   position = `-${lastIndex * 100}%`
+  //   slide = slides[lastIndex]
+  // } else if (currentIndex === lastIndex && targetIndex === -1) {
+  //   position = '0'
+  //   slide = slides[0]
+  // }
+
+  // track.style.setProperty('--position', position)
+  // slide.classList.add('current-slide')
+
+  moveToSlide(track, currentSlide, targetSlide)
+  udpateDots(currentDot, targetDot)
 })
 
 run()
