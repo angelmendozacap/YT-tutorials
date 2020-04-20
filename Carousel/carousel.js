@@ -1,4 +1,4 @@
-const API_URL = 'https://picsum.photos/v2/list?page=5&limit=5'
+const API_URL = 'https://picsum.photos/v2/list?page=5&limit=20'
 
 const track = document.querySelector('.carousel__track')
 const prevBtn = document.querySelector('.carousel__btn--left')
@@ -72,7 +72,16 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 
 const udpateDots = (currentDot, targetDot) => {
   currentDot.classList.remove('active')
-  targetDot.classList.add('active')
+  const lastIndex = dots.length - 1
+  let dot = targetDot
+
+  if (currentDot === dots[0] && !targetDot) {
+    dot = dots[lastIndex]
+  } else if (currentDot === dots[lastIndex] && !targetDot) {
+    dot = dots[0]
+  }
+
+  dot.classList.add('active')
 }
 
 const run = async () => {
@@ -115,25 +124,6 @@ dotsNav.addEventListener('click', e => {
 
   const targetIndex = dots.findIndex(dot => dot === targetDot)
   const targetSlide = slides[targetIndex]
-
-  // const currentIndex = slides.findIndex(slide => slide === currentSlide)
-  // const targetIndex = slides.findIndex(slide => slide === targetSlide)
-  // currentSlide.classList.remove('current-slide')
-
-  // const lastIndex = slides.length - 1
-  // let position = `-${targetIndex * 100}%`
-  // let slide = targetSlide
-
-  // if (currentIndex === 0 && targetIndex === -1) {
-  //   position = `-${lastIndex * 100}%`
-  //   slide = slides[lastIndex]
-  // } else if (currentIndex === lastIndex && targetIndex === -1) {
-  //   position = '0'
-  //   slide = slides[0]
-  // }
-
-  // track.style.setProperty('--position', position)
-  // slide.classList.add('current-slide')
 
   moveToSlide(track, currentSlide, targetSlide)
   udpateDots(currentDot, targetDot)
